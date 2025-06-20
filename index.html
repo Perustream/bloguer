@@ -397,7 +397,7 @@ if ('mediaSession' in navigator) {
 
 
 
-<button id="installBtn" style="margin-top:20px; padding:10px 20px; background:#ffcc00; border:none; border-radius:5px; font-size:16px; cursor:pointer;">
+<button id="installBtn" style="display:none;">
 📲 Instalar DJ WILMER
 </button>
 
@@ -1404,29 +1404,27 @@ setInterval(() => {
 
 
 
+
 <script>
 let deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    document.getElementById("installBtn").style.display = "block";
-});
 
-document.getElementById("installBtn").addEventListener("click", () => {
-    if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === "accepted") {
-                console.log("✅ Aplicación instalada correctamente");
-            } else {
-                console.log("❌ Instalación cancelada");
-            }
-            deferredPrompt = null;
-        });
-    }
+    // Intento de instalación automática si el usuario permite
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+            console.log("✅ Aplicación instalada automáticamente");
+        } else {
+            console.log("❌ Usuario rechazó la instalación automática");
+        }
+        deferredPrompt = null;
+    });
 });
 </script>
+
 
 </body>
 
