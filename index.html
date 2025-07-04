@@ -1366,7 +1366,7 @@ setInterval(() => {
 <script>
 const spanOyentes = document.getElementById("contador-oyentes");
 try {
-  const fuenteOyentes = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/hlu0yaszg7utv");
+  const fuenteOyentes = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/k5fqy6x0nv8uv");
   fuenteOyentes.addEventListener("message", function(event) {
     try {
       const datos = JSON.parse(event.data);
