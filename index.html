@@ -1,4 +1,4 @@
-
+no
 <!DOCTYPE html>
 
 <html lang="es">
@@ -417,7 +417,7 @@ if ('mediaSession' in navigator) {
 <a href="https://www.tiktok.com/@dionicioradio"><img src="https://i.postimg.cc/HsmSG3zb/tiktok.png" width="40"/></a>
 <a href="https://djwilmer.com/"><img src="https://i.postimg.cc/pyNMxj0p/web.png" width="50"/></a>
 </div>
-<audio crossorigin="anonymous" id="audioPlayer" src="https://stream.zeno.fm/hlu0yaszg7utv"></audio>
+<audio crossorigin="anonymous" id="audioPlayer" src="https://stream.zeno.fm/k5fqy6x0nv8uv"></audio>
 <script>
 const button = document.getElementById("playPauseButton");
 const audio = document.getElementById("audioPlayer");
@@ -512,7 +512,7 @@ if ('mediaSession' in navigator) {
 </script>
 <script>
 const songDisplay = document.getElementById("current-song");
-const source = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/hlu0yaszg7utv");
+const source = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/k5fqy6x0nv8uv");
 source.addEventListener("message", function(event) {
     try {
         const data = JSON.parse(event.data);
