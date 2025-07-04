@@ -1,4 +1,4 @@
-no
+2no
 <!DOCTYPE html>
 
 <html lang="es">
@@ -837,7 +837,7 @@ buscarEnMusicBrainzFlexible(artista, cancion);
     .catch(() => cover.src = fallback);
 }
 
-const sourceMeta = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/hlu0yaszg7utv");
+const sourceMeta = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/k5fqy6x0nv8uv");
 sourceMeta.addEventListener("message", function(event) {
   try {
     const data = JSON.parse(event.data);
@@ -915,7 +915,7 @@ if ('mediaSession' in navigator) {
 
 <script>
 const metadata = document.getElementById("metadata");
-const source = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/hlu0yaszg7utv");
+const source = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/k5fqy6x0nv8uv");
 source.addEventListener("message", function(event) {
   try {
     const data = JSON.parse(event.data);
@@ -1137,7 +1137,7 @@ buscarEnMusicBrainzFlexible(artista, cancion);
     });
 }
 
-const stream = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/hlu0yaszg7utv");
+const stream = new EventSource("https://api.zeno.fm/mounts/metadata/subscribe/k5fqy6x0nv8uv");
 stream.addEventListener("message", function(event) {
   try {
     const data = JSON.parse(event.data);
